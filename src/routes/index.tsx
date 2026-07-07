@@ -3,11 +3,17 @@ import { useState, type FormEvent } from "react";
 import { Menu, X, Instagram, Youtube, Phone, Mail, MapPin, Play, ArrowRight, Music2 } from "lucide-react";
 
 import logoAsset from "@/assets/classy-aureon-logo.jpg.asset.json";
-import heroImg from "@/assets/hero-wedding.jpg";
-import galleryPiano from "@/assets/gallery-piano.jpg";
-import galleryViolin from "@/assets/gallery-violin.jpg";
-import galleryCello from "@/assets/gallery-cello.jpg";
-import galleryQuartet from "@/assets/gallery-quartet.jpg";
+import photoPianistAsset from "@/assets/photo-pianist.png.asset.json";
+import photoPianoAsset from "@/assets/photo-piano.png.asset.json";
+import photoSingerAsset from "@/assets/photo-singer.png.asset.json";
+import photoDuoAsset from "@/assets/photo-duo.png.asset.json";
+import photoBassAsset from "@/assets/photo-bass.png.asset.json";
+
+const heroImg = photoPianistAsset.url;
+const galleryPiano = photoPianoAsset.url;
+const galleryViolin = photoBassAsset.url;
+const galleryCello = photoSingerAsset.url;
+const galleryQuartet = photoDuoAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
