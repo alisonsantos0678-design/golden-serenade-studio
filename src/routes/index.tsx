@@ -2,18 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Menu, X, Instagram, Youtube, Phone, Mail, MapPin, Play, ArrowRight, Music2 } from "lucide-react";
 
-import logoAsset from "@/assets/classy-aureon-logo.jpg.asset.json";
-import photoPianistAsset from "@/assets/photo-pianist.png.asset.json";
-import photoPianoAsset from "@/assets/photo-piano.png.asset.json";
-import photoSingerAsset from "@/assets/photo-singer.png.asset.json";
-import photoDuoAsset from "@/assets/photo-duo.png.asset.json";
-import photoBassAsset from "@/assets/photo-bass.png.asset.json";
-
-const heroImg = photoPianistAsset.url;
-const galleryPiano = photoPianoAsset.url;
-const galleryViolin = photoBassAsset.url;
-const galleryCello = photoSingerAsset.url;
-const galleryQuartet = photoDuoAsset.url;
+const logoImg = "/classy-aureon-logo.jpg";
+const heroImg = "/photo-pianist.png";
+const galleryPiano = "/photo-piano.png";
+const galleryViolin = "/photo-bass.png";
+const galleryCello = "/photo-singer.png";
+const galleryQuartet = "/photo-duo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -53,7 +47,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 h-20 grid grid-cols-[auto_1fr_auto] items-center gap-6">
         <a href="#top" className="flex items-center gap-3 min-w-0">
-          <img src={logoAsset.url} alt="Classy Aureon" className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
+          <img src={logoImg} alt="Classy Aureon" className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
           <span className="hidden sm:block font-serif text-xl tracking-wide text-gold-gradient truncate">Classy Aureon</span>
         </a>
         <nav className="hidden lg:flex items-center justify-center gap-10">
@@ -389,7 +383,7 @@ function Footer() {
         <div className="divider-gold mb-12" />
         <div className="grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
           <div className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Classy Aureon" className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/40" />
+            <img src={logoImg} alt="Classy Aureon" className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/40" />
             <span className="font-serif text-lg text-gold-gradient">Classy Aureon</span>
           </div>
           <p className="text-sm text-muted-foreground md:text-center italic font-serif">
