@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP = "5511999999999";
+const WHATSAPP = "5522999972625";
 const WHATSAPP_MSG = encodeURIComponent("Olá! Gostaria de saber sobre a Classy Aureon para o meu evento.");
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${WHATSAPP_MSG}`;
 
@@ -298,7 +298,7 @@ function Contact() {
 
           <div className="mt-12 space-y-6">
             {[
-              { icon: Phone, label: "WhatsApp", value: "+55 (11) 99999-9999", href: WHATSAPP_URL },
+              { icon: Phone, label: "WhatsApp", value: "+55 (22) 99997-2625", href: WHATSAPP_URL },
               { icon: Mail, label: "E-mail", value: "contato@classyaureon.com", href: "mailto:contato@classyaureon.com" },
               { icon: MapPin, label: "Atendemos", value: "São Paulo · Rio · destinos nacionais", href: undefined as string | undefined },
             ].map((c) => {
