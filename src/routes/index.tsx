@@ -91,14 +91,13 @@ function Hero() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-24 w-full">
         <div className="max-w-3xl animate-fade-up">
-          <div className="eyebrow mb-8">Música Clássica ao Vivo</div>
+          <div className="eyebrow mb-8">Música sofisticada ao vivo</div>
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-8xl leading-[1.02] tracking-tight">
-            <span className="block text-foreground">Música clássica</span>
-            <span className="block italic text-gold-gradient">para momentos</span>
-            <span className="block text-foreground">inesquecíveis.</span>
+            <span className="block text-foreground">Experiência musical</span>
+            <span className="block italic text-gold-gradient">de alto padrão</span>
           </h1>
           <p className="mt-10 max-w-xl text-lg text-muted-foreground leading-relaxed font-light">
-            A <span className="text-gold">Classy Aureon</span> compõe a trilha sonora de casamentos e eventos sofisticados com piano, cordas e arranjos autorais do primeiro acorde à última valsa.
+            Oferecemos uma arquitetura sonora exclusiva e repertório personalizado para cada tipo de evento, alinhado ao único piano de cauda dourado e portátil do Brasil.
           </p>
           <div className="mt-12 flex flex-wrap items-center gap-4">
             <a href="#contato" className="btn-gold">Solicitar Proposta <ArrowRight size={14} /></a>
@@ -145,9 +144,9 @@ function About() {
         </div>
 
         <div className="lg:col-span-7 lg:pl-10">
-          <div className="eyebrow mb-6">Sobre a Banda</div>
+          <div className="eyebrow mb-6">Sobre a PRODUTORA</div>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-            Uma orquestra íntima, <em className="italic text-gold-gradient">esculpida</em> para o seu evento.
+            Uma produtora musical <em className="italic text-gold-gradient">esculpida</em> para o seu evento.
           </h2>
           <div className="mt-10 space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
             <p>
