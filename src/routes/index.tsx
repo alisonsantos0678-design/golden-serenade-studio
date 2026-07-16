@@ -382,7 +382,7 @@ function Footer() {
         <div className="divider-gold mb-12" />
         <div className="grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
           <div className="flex items-center gap-3">
-            <img src={logoImg} alt="Classy Aureon" className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/40" />
+            <img src={logoImg} alt="Classy Aureon" className="h-14 w-14 rounded-full object-cover ring-1 ring-gold/40" />
             <span className="font-serif text-lg text-gold-gradient">Classy Aureon</span>
           </div>
           <p className="text-sm text-muted-foreground md:text-center italic font-serif">
