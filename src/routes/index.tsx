@@ -47,7 +47,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="mx-auto max-w-7xl px-6 lg:px-12 h-20 grid grid-cols-[auto_1fr_auto] items-center gap-6">
         <a href="#top" className="flex items-center gap-3 min-w-0">
-          <img src={logoImg} alt="Classy Aureon" className="h-10 w-10 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
+          <img src={logoImg} alt="Classy Aureon" className="h-16 w-16 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
           <span className="hidden sm:block font-serif text-xl tracking-wide text-gold-gradient truncate">Classy Aureon</span>
         </a>
         <nav className="hidden lg:flex items-center justify-center gap-10">
