@@ -207,7 +207,7 @@ function Repertoire() {
 
 function Portfolio() {
   const photos = [
-    { src: galleryQuartet, alt: "Quarteto em salão de baile", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
+    { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
     { src: galleryPiano, alt: "Pianista em performance", span: "lg:col-span-4 aspect-[4/5]" },
     { src: galleryViolin, alt: "Violinista em cerimônia", span: "lg:col-span-4 aspect-[4/3]" },
     { src: galleryCello, alt: "Violoncelista ao entardecer", span: "lg:col-span-6 aspect-[4/3]" },
