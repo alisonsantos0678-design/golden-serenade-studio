@@ -188,7 +188,7 @@ function Repertoire() {
         <div className="max-w-2xl">
           <div className="eyebrow mb-6">Repertório</div>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-            Do sacro ao contemporâneo, <em className="italic text-gold-gradient">sob medida</em>.
+            Do tradicional ao moderno, <em className="italic text-gold-gradient">sob medida</em>.
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-3 gap-px bg-border/60">
