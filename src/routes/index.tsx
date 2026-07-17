@@ -138,8 +138,9 @@ function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
           </div>
           <div className="absolute -bottom-8 -right-6 lg:-right-12 bg-card border border-gold/30 p-8 max-w-[240px] shadow-soft">
-            <div className="font-serif text-5xl text-gold-gradient leading-none">04</div>
-            <div className="mt-3 text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground">Músicos residentes de formação clássica</div>
+            <div className="text-sm text-foreground/90 leading-relaxed">
+              Intérpretes com mais de <span className="text-gold-gradient font-medium">10 anos</span> de <span className="text-gold-gradient font-medium">experiência internacional</span>.
+            </div>
           </div>
         </div>
 
