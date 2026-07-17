@@ -138,8 +138,9 @@ function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
           </div>
           <div className="absolute -bottom-8 -right-6 lg:-right-12 bg-card border border-gold/30 p-8 max-w-[240px] shadow-soft">
-            <div className="font-serif text-5xl text-gold-gradient leading-none">04</div>
-            <div className="mt-3 text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground">Músicos residentes de formação clássica</div>
+            <div className="text-sm text-foreground/90 leading-relaxed">
+              Intérpretes com mais de <span className="text-gold-gradient font-medium">10 anos</span> de <span className="text-gold-gradient font-medium">experiência internacional</span>.
+            </div>
           </div>
         </div>
 
@@ -153,7 +154,7 @@ function About() {
               Formada por músicos com passagem por orquestras sinfônicas e conservatórios, a Classy Aureon nasceu para traduzir emoção em som ao vivo — com o rigor da música erudita e a sensibilidade dos grandes momentos.
             </p>
             <p>
-              Nosso ensemble combina <span className="text-gold">piano de cauda, violino, violoncelo e viola</span>, com repertório que atravessa Bach, Debussy, trilhas de cinema e releituras clássicas do pop contemporâneo.
+              Nosso Ensemble combina <span className="text-gold">Piano de Cauda</span> à instrumentos eruditos e populares, com repertório que atravessa Bach, Beethoven, trilhas de cinema e releituras de artistas do pop contemporâneo.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6">
@@ -177,9 +178,9 @@ function About() {
 
 function Repertoire() {
   const items = [
-    { t: "Clássicos Eternos", d: "Pachelbel, Bach, Debussy, Satie e as peças que definem cerimônias inesquecíveis." },
-    { t: "Trilhas de Cinema", d: "Morricone, Zimmer, Yiruma — a emoção do cinema traduzida em cordas e piano." },
-    { t: "Pop Reimaginado", d: "Coldplay, Adele, Beatles, Ed Sheeran em arranjos eruditos exclusivos." },
+    { t: "Clássicos Eternos", d: "Pachelbel, Bach, Debussy, Beethoven e as peças que definem cerimônias inesquecíveis." },
+    { t: "Trilhas de Cinema", d: "John Willians (Star Wars, Harry Potter, Indiana Jones), Hans Zimmer (Interstellar, Cornfield Chase), Yiruma (River Flows in You, Kiss The Rain)." },
+    { t: "Pop Reimaginado", d: "Coldplay, Adele, Beatles, Ed Sheeran em arranjos exclusivos." },
   ];
   return (
     <section id="repertorio" className="py-32 lg:py-40 border-y border-border/40 bg-card/30">
@@ -187,7 +188,7 @@ function Repertoire() {
         <div className="max-w-2xl">
           <div className="eyebrow mb-6">Repertório</div>
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-            Do sacro ao contemporâneo, <em className="italic text-gold-gradient">sob medida</em>.
+            Do tradicional ao moderno, <em className="italic text-gold-gradient">sob medida</em>.
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-3 gap-px bg-border/60">
@@ -206,7 +207,7 @@ function Repertoire() {
 
 function Portfolio() {
   const photos = [
-    { src: galleryQuartet, alt: "Quarteto em salão de baile", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
+    { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
     { src: galleryPiano, alt: "Pianista em performance", span: "lg:col-span-4 aspect-[4/5]" },
     { src: galleryViolin, alt: "Violinista em cerimônia", span: "lg:col-span-4 aspect-[4/3]" },
     { src: galleryCello, alt: "Violoncelista ao entardecer", span: "lg:col-span-6 aspect-[4/3]" },
