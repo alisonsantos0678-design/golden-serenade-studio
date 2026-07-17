@@ -178,9 +178,9 @@ function About() {
 
 function Repertoire() {
   const items = [
-    { t: "Clássicos Eternos", d: "Pachelbel, Bach, Debussy, Satie e as peças que definem cerimônias inesquecíveis." },
-    { t: "Trilhas de Cinema", d: "Morricone, Zimmer, Yiruma — a emoção do cinema traduzida em cordas e piano." },
-    { t: "Pop Reimaginado", d: "Coldplay, Adele, Beatles, Ed Sheeran em arranjos eruditos exclusivos." },
+    { t: "Clássicos Eternos", d: "Pachelbel, Bach, Debussy, Beethoven e as peças que definem cerimônias inesquecíveis." },
+    { t: "Trilhas de Cinema", d: "John Willians (Star Wars, Harry Potter, Indiana Jones), Hans Zimmer (Interstellar, Cornfield Chase), Yiruma (River Flows in You, Kiss The Rain)." },
+    { t: "Pop Reimaginado", d: "Coldplay, Adele, Beatles, Ed Sheeran em arranjos exclusivos." },
   ];
   return (
     <section id="repertorio" className="py-32 lg:py-40 border-y border-border/40 bg-card/30">
