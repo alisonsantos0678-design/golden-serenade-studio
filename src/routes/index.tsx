@@ -154,7 +154,7 @@ function About() {
               Formada por músicos com passagem por orquestras sinfônicas e conservatórios, a Classy Aureon nasceu para traduzir emoção em som ao vivo — com o rigor da música erudita e a sensibilidade dos grandes momentos.
             </p>
             <p>
-              Nosso ensemble combina <span className="text-gold">piano de cauda, violino, violoncelo e viola</span>, com repertório que atravessa Bach, Debussy, trilhas de cinema e releituras clássicas do pop contemporâneo.
+              Nosso Ensemble combina <span className="text-gold">Piano de Cauda</span> à instrumentos eruditos e populares, com repertório que atravessa Bach, Beethoven, trilhas de cinema e releituras de artistas do pop contemporâneo.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6">
