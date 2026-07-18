@@ -209,11 +209,17 @@ function Repertoire() {
 
 function Portfolio() {
   const photos = [
-    { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
-    { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-4 aspect-[4/5]" },
-    { src: galleryViolin, alt: "Violinista em cerimônia", span: "lg:col-span-4 aspect-[4/3]" },
-    { src: galleryCello, alt: "Violoncelista ao entardecer", span: "lg:col-span-6 aspect-[4/3]" },
-    { src: galleryQuartet, alt: "15 anos", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: "/portfolio-7331.png", alt: "Cerimônia à beira-mar · Búzios", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
+    { src: "/portfolio-7332.png", alt: "Vocalista em performance", span: "lg:col-span-4 aspect-[4/5]" },
+    { src: "/portfolio-7329.png", alt: "Ensemble à beira-mar", span: "lg:col-span-4 aspect-[4/3]" },
+    { src: "/portfolio-7336.png", alt: "Contrabaixo e sopros com vista para o mar", span: "lg:col-span-8 aspect-[16/9]" },
+    { src: "/portfolio-7337.png", alt: "Cerimônia de casamento · pôr do sol", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: "/portfolio-7335.png", alt: "Saída dos noivos · chuva de pétalas", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: "/portfolio-7334.png", alt: "Cerimônia com harpa", span: "lg:col-span-5 aspect-[4/5]" },
+    { src: "/portfolio-7339.png", alt: "Quarteto ao ar livre", span: "lg:col-span-7 aspect-[4/3]" },
+    { src: "/portfolio-7330.png", alt: "Piano e violino · detalhe", span: "lg:col-span-12 aspect-[21/9]" },
+    { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-6 aspect-[4/3]" },
   ];
 
   return (
