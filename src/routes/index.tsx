@@ -220,6 +220,12 @@ function Portfolio() {
     { src: "/portfolio-7330.png", alt: "Piano e violino · detalhe", span: "lg:col-span-7 aspect-[16/9]" },
     { src: "/portfolio-7340.png", alt: "Violoncelo · detalhe", span: "lg:col-span-5 aspect-[4/5]" },
     { src: "/portfolio-7338.png", alt: "Ensemble com vista para o mar", span: "lg:col-span-12 aspect-[21/9]" },
+    { src: "/portfolio-7322.png", alt: "Técnica e classe alinhadas.", span: "lg:col-span-5 aspect-[4/5]" },
+    { src: "/portfolio-7323.png", alt: "Performance de MPB e Bossa Nova por Jersika Faustino.", span: "lg:col-span-7 aspect-[16/10]" },
+    { src: "/portfolio-7325.png", alt: "Cocktail Set com elegância.", span: "lg:col-span-5 aspect-[4/5]" },
+    { src: "/portfolio-7324.png", alt: "Atmosfera refinada com expressividade.", span: "lg:col-span-7 aspect-[16/9]" },
+    { src: "/portfolio-7326.png", alt: "Participação de Debutante em Homenagem durante o Show.", span: "lg:col-span-7 aspect-[4/3]" },
+    { src: "/portfolio-7327.png", alt: "Participação de Debutante em Homenagem durante o Show.", span: "lg:col-span-5 aspect-[4/3]" },
     { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-6 aspect-[4/3]" },
     { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-6 aspect-[4/3]" },
   ];
@@ -421,8 +427,8 @@ function Footer() {
             <img src={logoImg} alt="Classy Aureon" className="h-14 w-14 rounded-full object-cover ring-1 ring-gold/40" />
             <span className="font-serif text-lg text-gold-gradient">Classy Aureon</span>
           </div>
-          <p className="text-sm text-muted-foreground md:text-center italic font-serif">
-            "Onde a música clássica encontra os momentos que ficam para sempre."
+          <p className="text-base md:text-xl lg:text-2xl text-muted-foreground md:text-center italic font-serif leading-relaxed">
+            "Onde a música encontra os momentos que ficam para sempre."
           </p>
           <p className="text-xs text-muted-foreground md:text-right uppercase tracking-[0.28em]">
             © {new Date().getFullYear()} Classy Aureon
