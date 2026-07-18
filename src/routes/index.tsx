@@ -427,8 +427,8 @@ function Footer() {
             <img src={logoImg} alt="Classy Aureon" className="h-14 w-14 rounded-full object-cover ring-1 ring-gold/40" />
             <span className="font-serif text-lg text-gold-gradient">Classy Aureon</span>
           </div>
-          <p className="text-sm text-muted-foreground md:text-center italic font-serif">
-            "Onde a música clássica encontra os momentos que ficam para sempre."
+          <p className="text-base md:text-xl lg:text-2xl text-muted-foreground md:text-center italic font-serif leading-relaxed">
+            "Onde a música encontra os momentos que ficam para sempre."
           </p>
           <p className="text-xs text-muted-foreground md:text-right uppercase tracking-[0.28em]">
             © {new Date().getFullYear()} Classy Aureon
