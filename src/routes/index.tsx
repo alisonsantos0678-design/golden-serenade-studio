@@ -34,6 +34,7 @@ function Index() {
         <About />
         <Repertoire />
         <Portfolio />
+        <Feedback />
         <Contact />
       </main>
       <Footer />
