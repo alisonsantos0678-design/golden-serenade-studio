@@ -21,6 +21,7 @@ const nav = [
   { label: "Sobre", href: "#sobre" },
   { label: "Repertório", href: "#repertorio" },
   { label: "Portfólio", href: "#portfolio" },
+  { label: "Feedback", href: "#feedback" },
   { label: "Contato", href: "#contato" },
 ];
 
