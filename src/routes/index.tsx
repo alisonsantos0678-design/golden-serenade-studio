@@ -217,7 +217,9 @@ function Portfolio() {
     { src: "/portfolio-7335.png", alt: "Saída dos noivos · chuva de pétalas", span: "lg:col-span-6 aspect-[4/3]" },
     { src: "/portfolio-7334.png", alt: "Cerimônia com harpa", span: "lg:col-span-5 aspect-[4/5]" },
     { src: "/portfolio-7339.png", alt: "Quarteto ao ar livre", span: "lg:col-span-7 aspect-[4/3]" },
-    { src: "/portfolio-7330.png", alt: "Piano e violino · detalhe", span: "lg:col-span-12 aspect-[21/9]" },
+    { src: "/portfolio-7330.png", alt: "Piano e violino · detalhe", span: "lg:col-span-7 aspect-[16/9]" },
+    { src: "/portfolio-7340.png", alt: "Violoncelo · detalhe", span: "lg:col-span-5 aspect-[4/5]" },
+    { src: "/portfolio-7338.png", alt: "Ensemble com vista para o mar", span: "lg:col-span-12 aspect-[21/9]" },
     { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-6 aspect-[4/3]" },
     { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-6 aspect-[4/3]" },
   ];
