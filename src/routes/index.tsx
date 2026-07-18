@@ -3,7 +3,7 @@ import { useState, type FormEvent } from "react";
 import { Menu, X, Instagram, Youtube, Phone, Mail, MapPin, Play, ArrowRight, Music2 } from "lucide-react";
 
 const logoImg = "/classy-aureon-logo.jpg";
-const heroImg = "/photo-pianist.png";
+const heroImg = "/photo-hero.png";
 const galleryPiano = "/photo-piano.png";
 const galleryViolin = "/photo-bass.png";
 const galleryCello = "/photo-singer.png";
