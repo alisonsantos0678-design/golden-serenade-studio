@@ -21,6 +21,7 @@ const nav = [
   { label: "Sobre", href: "#sobre" },
   { label: "Repertório", href: "#repertorio" },
   { label: "Portfólio", href: "#portfolio" },
+  { label: "Feedback", href: "#feedback" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -33,6 +34,7 @@ function Index() {
         <About />
         <Repertoire />
         <Portfolio />
+        <Feedback />
         <Contact />
       </main>
       <Footer />
@@ -207,11 +209,17 @@ function Repertoire() {
 
 function Portfolio() {
   const photos = [
-    { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
-    { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-4 aspect-[4/5]" },
-    { src: galleryViolin, alt: "Violinista em cerimônia", span: "lg:col-span-4 aspect-[4/3]" },
-    { src: galleryCello, alt: "Violoncelista ao entardecer", span: "lg:col-span-6 aspect-[4/3]" },
-    { src: galleryQuartet, alt: "15 anos", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: "/portfolio-7331.png", alt: "Cerimônia à beira-mar · Búzios", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
+    { src: "/portfolio-7332.png", alt: "Vocalista em performance", span: "lg:col-span-4 aspect-[4/5]" },
+    { src: "/portfolio-7329.png", alt: "Ensemble à beira-mar", span: "lg:col-span-4 aspect-[4/3]" },
+    { src: "/portfolio-7336.png", alt: "Contrabaixo e sopros com vista para o mar", span: "lg:col-span-8 aspect-[16/9]" },
+    { src: "/portfolio-7337.png", alt: "Cerimônia de casamento · pôr do sol", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: "/portfolio-7335.png", alt: "Saída dos noivos · chuva de pétalas", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: "/portfolio-7334.png", alt: "Cerimônia com harpa", span: "lg:col-span-5 aspect-[4/5]" },
+    { src: "/portfolio-7339.png", alt: "Quarteto ao ar livre", span: "lg:col-span-7 aspect-[4/3]" },
+    { src: "/portfolio-7330.png", alt: "Piano e violino · detalhe", span: "lg:col-span-12 aspect-[21/9]" },
+    { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-6 aspect-[4/3]" },
   ];
 
   return (
@@ -247,20 +255,45 @@ function Portfolio() {
           ))}
         </div>
 
-        <div className="mt-20 grid md:grid-cols-2 gap-6">
-          {[{ img: galleryQuartet, t: "Live At Alphaville" }, { img: galleryPiano, t: "Cerimônia · Fasano" }].map((v, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden bg-card border border-border group cursor-pointer">
-              <img src={v.img} alt="Performance em vídeo" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-background/40" />
+      </div>
+    </section>
+  );
+}
+
+function Feedback() {
+  const videos = [
+    { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
+    { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
+    { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
+    { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
+  ];
+  return (
+    <section id="feedback" className="py-32 lg:py-44 border-y border-border/40 bg-card/30">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="max-w-3xl mb-16">
+          <div className="eyebrow mb-6">Feedback</div>
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
+            Clientes que <em className="italic text-gold-gradient">viveram a experiência</em>.
+          </h2>
+          <p className="mt-8 text-muted-foreground text-lg font-light leading-relaxed">
+            Momentos reais, emoções genuínas. Depoimentos de quem confiou à Classy Aureon a trilha sonora dos seus dias inesquecíveis.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {videos.map((v, i) => (
+            <div key={i} className="relative aspect-video overflow-hidden bg-background border border-border/60 group">
+              <div className="absolute inset-0 bg-gradient-to-br from-card via-background to-card" />
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="h-20 w-20 rounded-full border border-gold/60 flex items-center justify-center backdrop-blur-sm bg-background/30 group-hover:bg-gold group-hover:border-gold transition-all duration-500">
+                <div className="h-20 w-20 rounded-full border border-gold/60 flex items-center justify-center bg-background/30 group-hover:bg-gold group-hover:border-gold transition-all duration-500">
                   <Play size={26} className="text-gold group-hover:text-primary-foreground translate-x-0.5 transition-colors" />
                 </div>
-                <div className="text-center">
-                  <div className="font-serif text-xl">{v.t}</div>
-                  <div className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground mt-1">Vídeo · 2:41</div>
+                <div className="text-center px-4">
+                  <div className="font-serif text-xl text-foreground">{v.t}</div>
+                  <div className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground mt-1">{v.sub}</div>
                 </div>
               </div>
+              <div className="absolute top-4 left-4 text-[0.65rem] uppercase tracking-[0.3em] text-gold">0{i + 1}</div>
             </div>
           ))}
         </div>
