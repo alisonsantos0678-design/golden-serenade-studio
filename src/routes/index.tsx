@@ -159,10 +159,10 @@ function About() {
           </div>
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-6">
             {[
-              "Cerimônia religiosa",
-              "Recepção & coquetel",
-              "Trilha de entrada",
-              "Bodas & jantares privados",
+              "Cerimônias de casamento",
+              "Eventos Corporativos",
+              "Aniversário de XV anos",
+              "Bodas e Jantares Privados",
             ].map((f) => (
               <div key={f} className="flex items-start gap-3 border-t border-border/60 pt-4">
                 <Music2 size={16} className="text-gold mt-1 shrink-0" />
@@ -208,10 +208,10 @@ function Repertoire() {
 function Portfolio() {
   const photos = [
     { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-8 lg:row-span-2 aspect-[16/11]" },
-    { src: galleryPiano, alt: "Pianista em performance", span: "lg:col-span-4 aspect-[4/5]" },
+    { src: galleryPiano, alt: "Execução no evento corporativo Éden Pulse", span: "lg:col-span-4 aspect-[4/5]" },
     { src: galleryViolin, alt: "Violinista em cerimônia", span: "lg:col-span-4 aspect-[4/3]" },
     { src: galleryCello, alt: "Violoncelista ao entardecer", span: "lg:col-span-6 aspect-[4/3]" },
-    { src: galleryQuartet, alt: "Ensemble ao vivo", span: "lg:col-span-6 aspect-[4/3]" },
+    { src: galleryQuartet, alt: "15 anos", span: "lg:col-span-6 aspect-[4/3]" },
   ];
 
   return (
@@ -248,7 +248,7 @@ function Portfolio() {
         </div>
 
         <div className="mt-20 grid md:grid-cols-2 gap-6">
-          {[{ img: galleryQuartet, t: "Live at Copacabana Palace" }, { img: galleryPiano, t: "Cerimônia · Fasano" }].map((v, i) => (
+          {[{ img: galleryQuartet, t: "Live At Alphaville" }, { img: galleryPiano, t: "Cerimônia · Fasano" }].map((v, i) => (
             <div key={i} className="relative aspect-video overflow-hidden bg-card border border-border group cursor-pointer">
               <img src={v.img} alt="Performance em vídeo" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-background/40" />
@@ -293,8 +293,8 @@ function Contact() {
           <div className="mt-12 space-y-6">
             {[
               { icon: Phone, label: "WhatsApp", value: "+55 (22) 99997-2625", href: WHATSAPP_URL },
-              { icon: Mail, label: "E-mail", value: "contato@classyaureon.com", href: "mailto:contato@classyaureon.com" },
-              { icon: MapPin, label: "Atendemos", value: "São Paulo · Rio · destinos nacionais", href: undefined as string | undefined },
+              { icon: Mail, label: "E-mail", value: "classyaureon@gmail.com", href: "mailto:classyaureon@gmail.com" },
+              { icon: MapPin, label: "Sede", value: "Rio de Janeiro", href: undefined as string | undefined },
             ].map((c) => {
               const Inner = (
                 <>
