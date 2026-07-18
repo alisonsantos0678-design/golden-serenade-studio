@@ -5,9 +5,9 @@ import { Menu, X, Instagram, Youtube, Phone, Mail, MapPin, Play, ArrowRight, Mus
 const logoImg = "/classy-aureon-logo.jpg";
 const heroImg = "/photo-hero.png";
 const galleryPiano = "/photo-piano.png";
-const galleryViolin = "/photo-bass.png";
+const galleryViolin = "/photo-violin-new.png";
 const galleryCello = "/photo-singer.png";
-const galleryQuartet = "/photo-duo.png";
+const galleryQuartet = "/photo-showroom.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
