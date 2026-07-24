@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
-import { Menu, X, Instagram, Youtube, Phone, Mail, MapPin, Play, ArrowRight, Music2 } from "lucide-react";
+import { Menu, X, Instagram, Youtube, Mail, MapPin, Play, ArrowRight, Music2 } from "lucide-react";
 
-const logoImg = "/classy-aureon-logo.jpg";
-const heroImg = "/photo-hero.png";
+const logoImg = "/classy-aureon-logo-new.png";
+const heroImg = "/photo-hero-piano.jpg";
 const galleryPiano = "/photo-piano.png";
 const galleryViolin = "/photo-violin-new.png";
 const galleryCello = "/photo-singer.png";
@@ -16,6 +16,15 @@ export const Route = createFileRoute("/")({
 const WHATSAPP = "5522999972625";
 const WHATSAPP_MSG = encodeURIComponent("Olá! Gostaria de saber sobre a Classy Aureon para o meu evento.");
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${WHATSAPP_MSG}`;
+
+function WhatsAppIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size} aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z" />
+    </svg>
+  );
+}
 
 const nav = [
   { label: "Sobre", href: "#sobre" },
@@ -47,10 +56,10 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-background/70 border-b border-border/40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12 h-20 grid grid-cols-[auto_1fr_auto] items-center gap-6">
+      <div className="mx-auto max-w-7xl px-6 lg:px-12 h-24 grid grid-cols-[auto_1fr_auto] items-center gap-6">
         <a href="#top" className="flex items-center gap-3 min-w-0">
-          <img src={logoImg} alt="Classy Aureon" className="h-16 w-16 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
-          <span className="hidden sm:block font-serif text-xl tracking-wide text-gold-gradient truncate">Classy Aureon</span>
+          <img src={logoImg} alt="Classy Aureon" className="h-20 w-20 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
+          <span className="hidden sm:block font-serif text-2xl lg:text-3xl tracking-wide text-gold-gradient truncate">Classy Aureon</span>
         </a>
         <nav className="hidden lg:flex items-center justify-center gap-10">
           {nav.map((n) => (
@@ -84,9 +93,9 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="top" className="relative min-h-screen flex items-center overflow-hidden pt-24">
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Banda Classy Aureon em performance de casamento" className="h-full w-full object-cover animate-slow-zoom" width={1920} height={1200} />
+        <img src={heroImg} alt="Piano de cauda dourado da Classy Aureon em performance" className="h-full w-full object-cover object-[38%_14%] animate-slow-zoom" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/40" />
       </div>
@@ -141,7 +150,7 @@ function About() {
           </div>
           <div className="absolute -bottom-8 -right-6 lg:-right-12 bg-card border border-gold/30 p-8 max-w-[240px] shadow-soft">
             <div className="text-sm text-foreground/90 leading-relaxed">
-              Intérpretes com mais de <span className="text-gold-gradient font-medium">10 anos</span> de <span className="text-gold-gradient font-medium">experiência internacional</span>.
+              Intérpretes com mais de <span className="text-gold-gradient font-medium">10 anos</span> de <span className="text-gold-gradient font-medium">experiência e de nível internacional</span>.
             </div>
           </div>
         </div>
@@ -219,11 +228,11 @@ function Portfolio() {
     { src: "/portfolio-7339.png", alt: "Quarteto ao ar livre", span: "lg:col-span-7 aspect-[4/3]" },
     { src: "/portfolio-7330.png", alt: "Piano e violino · detalhe", span: "lg:col-span-7 aspect-[16/9]" },
     { src: "/portfolio-7340.png", alt: "Violoncelo · detalhe", span: "lg:col-span-5 aspect-[4/5]" },
-    { src: "/portfolio-7338.png", alt: "Ensemble com vista para o mar", span: "lg:col-span-12 aspect-[21/9]" },
+    { src: "/portfolio-7338.png", alt: "Ensemble com vista para o mar", span: "lg:col-span-4 lg:row-span-2 aspect-[9/16]" },
     { src: "/portfolio-7322.png", alt: "Técnica e classe alinhadas.", span: "lg:col-span-5 aspect-[4/5]" },
     { src: "/portfolio-7323.png", alt: "Performance de MPB e Bossa Nova por Jersika Faustino.", span: "lg:col-span-7 aspect-[16/10]" },
-    { src: "/portfolio-7325.png", alt: "Cocktail Set com elegância.", span: "lg:col-span-5 aspect-[4/5]" },
-    { src: "/portfolio-7324.png", alt: "Atmosfera refinada com expressividade.", span: "lg:col-span-7 aspect-[16/9]" },
+    { src: "/portfolio-7325.png", alt: "Atmosfera refinada com expressividade.", span: "lg:col-span-5 aspect-[4/5]" },
+    { src: "/portfolio-7324.png", alt: "Cocktail Set com elegância.", span: "lg:col-span-7 aspect-[16/9]" },
     { src: "/portfolio-7326.png", alt: "Participação de Debutante em Homenagem durante o Show.", span: "lg:col-span-7 aspect-[4/3]" },
     { src: "/portfolio-7327.png", alt: "Participação de Debutante em Homenagem durante o Show.", span: "lg:col-span-5 aspect-[4/3]" },
     { src: galleryQuartet, alt: "Inauguração Showroom Criare Alphaville", span: "lg:col-span-6 aspect-[4/3]" },
@@ -310,13 +319,30 @@ function Feedback() {
   );
 }
 
+const CONTACT_EMAIL = "classyaureon@gmail.com";
+
 function Contact() {
-  const [sent, setSent] = useState(false);
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    (e.currentTarget as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 5000);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    setStatus("sending");
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      if (!res.ok) throw new Error("Falha no envio");
+      setStatus("sent");
+      form.reset();
+      setTimeout(() => setStatus("idle"), 6000);
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 6000);
+    }
   };
 
   return (
@@ -333,7 +359,7 @@ function Contact() {
 
           <div className="mt-12 space-y-6">
             {[
-              { icon: Phone, label: "WhatsApp", value: "+55 (22) 99997-2625", href: WHATSAPP_URL },
+              { icon: WhatsAppIcon, label: "WhatsApp", value: "+55 (22) 99997-2625", href: WHATSAPP_URL },
               { icon: Mail, label: "E-mail", value: "classyaureon@gmail.com", href: "mailto:classyaureon@gmail.com" },
               { icon: MapPin, label: "Sede", value: "Rio de Janeiro", href: undefined as string | undefined },
             ].map((c) => {
@@ -358,7 +384,7 @@ function Contact() {
 
           <div className="mt-12 flex items-center gap-4">
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="h-11 w-11 border border-gold/40 flex items-center justify-center text-gold hover:bg-gold/10 transition-colors">
-              <Phone size={16} />
+              <WhatsAppIcon size={16} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="h-11 w-11 border border-gold/40 flex items-center justify-center text-gold hover:bg-gold/10 transition-colors">
               <Instagram size={16} />
@@ -370,6 +396,9 @@ function Contact() {
         </div>
 
         <form onSubmit={onSubmit} className="lg:col-span-7 bg-card/60 backdrop-blur border border-border p-8 lg:p-12 space-y-6">
+          <input type="hidden" name="_subject" value="Nova solicitação de orçamento — Classy Aureon" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
           <div className="grid md:grid-cols-2 gap-6">
             <Field label="Nome" name="nome" required />
             <Field label="E-mail" name="email" type="email" required />
@@ -391,9 +420,11 @@ function Contact() {
             <textarea name="mensagem" rows={4} maxLength={1000} className="mt-2 w-full bg-transparent border-b border-border py-3 text-foreground focus:border-gold focus:outline-none resize-none transition-colors" placeholder="Conte-nos sobre o seu evento..." />
           </div>
           <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
-            <p className="text-xs text-muted-foreground">Responderemos em até 24h.</p>
-            <button type="submit" className="btn-gold">
-              {sent ? "Mensagem enviada" : "Enviar Solicitação"} <ArrowRight size={14} />
+            <p className="text-xs text-muted-foreground">
+              {status === "error" ? "Não foi possível enviar. Tente novamente ou chame no WhatsApp." : "Responderemos em até 24h."}
+            </p>
+            <button type="submit" disabled={status === "sending"} className="btn-gold disabled:opacity-60 disabled:cursor-not-allowed">
+              {status === "sending" ? "Enviando..." : status === "sent" ? "Mensagem enviada" : "Enviar Solicitação"} <ArrowRight size={14} />
             </button>
           </div>
         </form>
@@ -424,8 +455,8 @@ function Footer() {
         <div className="divider-gold mb-12" />
         <div className="grid md:grid-cols-[auto_1fr_auto] gap-8 items-center">
           <div className="flex items-center gap-3">
-            <img src={logoImg} alt="Classy Aureon" className="h-14 w-14 rounded-full object-cover ring-1 ring-gold/40" />
-            <span className="font-serif text-lg text-gold-gradient">Classy Aureon</span>
+            <img src={logoImg} alt="Classy Aureon" className="h-20 w-20 rounded-full object-cover ring-1 ring-gold/40" />
+            <span className="font-serif text-2xl text-gold-gradient">Classy Aureon</span>
           </div>
           <p className="text-base md:text-xl lg:text-2xl text-muted-foreground md:text-center italic font-serif leading-relaxed">
             "Onde a música encontra os momentos que ficam para sempre."
@@ -446,11 +477,16 @@ function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       aria-label="Fale conosco no WhatsApp"
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed bottom-6 right-6 z-50 group flex items-center gap-3"
     >
-      <span className="absolute inset-0 rounded-full bg-gold/40 blur-xl group-hover:bg-gold/60 transition-colors" />
-      <span className="relative flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-br from-gold-soft to-gold text-primary-foreground shadow-luxe hover:scale-110 transition-transform duration-500">
-        <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/></svg>
+      <span className="hidden sm:block font-serif text-sm text-foreground bg-background/85 backdrop-blur border border-gold/40 px-4 py-2 rounded-full shadow-soft opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+        Fale conosco no WhatsApp
+      </span>
+      <span className="relative shrink-0">
+        <span className="absolute inset-0 rounded-full bg-gold/40 blur-xl group-hover:bg-gold/60 transition-colors" />
+        <span className="relative flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-br from-gold-soft to-gold text-primary-foreground shadow-luxe hover:scale-110 transition-transform duration-500">
+          <WhatsAppIcon size={24} />
+        </span>
       </span>
     </a>
   );
