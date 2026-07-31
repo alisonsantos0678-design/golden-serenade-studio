@@ -277,10 +277,67 @@ function Portfolio() {
   );
 }
 
+function FeedbackCard({ i, v }: { i: number; v: { t: string; sub: string; src?: string; poster?: string } }) {
+  const [playing, setPlaying] = useState(false);
+
+  if (v.src) {
+    return (
+      <div className="relative aspect-[9/16] md:aspect-video overflow-hidden bg-background border border-border/60 group">
+        {playing ? (
+          <video
+            src={v.src}
+            poster={v.poster}
+            controls
+            autoPlay
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <>
+            <img src={v.poster} alt={v.t} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/10 to-transparent" />
+            <button
+              type="button"
+              onClick={() => setPlaying(true)}
+              aria-label={`Reproduzir depoimento: ${v.t}`}
+              className="absolute inset-0 flex flex-col items-center justify-center gap-4 cursor-pointer"
+            >
+              <div className="h-20 w-20 rounded-full border border-gold/60 flex items-center justify-center bg-background/30 group-hover:bg-gold group-hover:border-gold transition-all duration-500">
+                <Play size={26} className="text-gold group-hover:text-primary-foreground translate-x-0.5 transition-colors" />
+              </div>
+              <div className="text-center px-4">
+                <div className="font-serif text-xl text-foreground">{v.t}</div>
+                <div className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground mt-1">{v.sub}</div>
+              </div>
+            </button>
+          </>
+        )}
+        <div className="absolute top-4 left-4 text-[0.65rem] uppercase tracking-[0.3em] text-gold pointer-events-none">0{i + 1}</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative aspect-video overflow-hidden bg-background border border-border/60 group">
+      <div className="absolute inset-0 bg-gradient-to-br from-card via-background to-card" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+        <div className="h-20 w-20 rounded-full border border-gold/60 flex items-center justify-center bg-background/30 group-hover:bg-gold group-hover:border-gold transition-all duration-500">
+          <Play size={26} className="text-gold group-hover:text-primary-foreground translate-x-0.5 transition-colors" />
+        </div>
+        <div className="text-center px-4">
+          <div className="font-serif text-xl text-foreground">{v.t}</div>
+          <div className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground mt-1">{v.sub}</div>
+        </div>
+      </div>
+      <div className="absolute top-4 left-4 text-[0.65rem] uppercase tracking-[0.3em] text-gold">0{i + 1}</div>
+    </div>
+  );
+}
+
 function Feedback() {
   const videos = [
-    { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
-    { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
+    { t: "Depoimento de noiva", sub: "Casamento · vídeo", src: "/feedback-1.mp4", poster: "/feedback-1-poster.jpg" },
+    { t: "Depoimento de noiva", sub: "Casamento · vídeo", src: "/feedback-2.mp4", poster: "/feedback-2-poster.jpg" },
     { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
     { t: "Depoimento em breve", sub: "Vídeo · a ser adicionado" },
   ];
@@ -299,19 +356,7 @@ function Feedback() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {videos.map((v, i) => (
-            <div key={i} className="relative aspect-video overflow-hidden bg-background border border-border/60 group">
-              <div className="absolute inset-0 bg-gradient-to-br from-card via-background to-card" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="h-20 w-20 rounded-full border border-gold/60 flex items-center justify-center bg-background/30 group-hover:bg-gold group-hover:border-gold transition-all duration-500">
-                  <Play size={26} className="text-gold group-hover:text-primary-foreground translate-x-0.5 transition-colors" />
-                </div>
-                <div className="text-center px-4">
-                  <div className="font-serif text-xl text-foreground">{v.t}</div>
-                  <div className="text-[0.7rem] uppercase tracking-[0.28em] text-muted-foreground mt-1">{v.sub}</div>
-                </div>
-              </div>
-              <div className="absolute top-4 left-4 text-[0.65rem] uppercase tracking-[0.3em] text-gold">0{i + 1}</div>
-            </div>
+            <FeedbackCard key={i} i={i} v={v} />
           ))}
         </div>
       </div>
